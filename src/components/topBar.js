@@ -23,7 +23,6 @@ export default class TopBar extends Component {
 const styles = {
   container: {
     background: '#1FAA74',
-    flex: 0.2,
     border: 'solid',
     borderWidth: 5,
     borderColor: 'red'

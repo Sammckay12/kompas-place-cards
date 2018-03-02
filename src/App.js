@@ -8,22 +8,12 @@ import Flexbox from 'flexbox-react'
 class App extends Component {
   render() {
     return (
-      <div style={styles.mainContainer}>
-        <TopBar />
-        <HeaderContainer />
+      <div className='topBar'>
+
       </div>
     );
   }
 }
 
-const styles = {
-  mainContainer: {
-    height: 100,
-    background: 'red',
-    border: 'solid',
-    borderWidth: 5,
-    borderColor: 'blue'
-  }
-}
 
 export default App;
