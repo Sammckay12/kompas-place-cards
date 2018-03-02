@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
-import logo from '../images/Kompas_Logo.png'
 
 
 
-
-export default class TopBar extends Component {
+export default class SimilarPlace extends Component {
 
   constructor (props) {
      super(props)
@@ -13,21 +11,19 @@ export default class TopBar extends Component {
 
    render () {
      return (
+
        <div style={styles.container}>
-         <img src={logo} width='150'></img>
+        hi
        </div>
      )
    }
-
-
 };
 
-
-const styles = {
+let styles = {
   container: {
-    height: 60,
-    background: '#1faa74',
+    height: 300,
     display: 'flex',
-    justifyContent: 'flex-start'
-  }
+    flex: 0.3,
+  },
+
 }
