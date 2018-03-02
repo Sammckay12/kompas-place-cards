@@ -1,7 +1,4 @@
-
 import React, { Component, Image } from 'react';
-
-
 
 export default class MainPlace extends Component {
 
@@ -20,8 +17,6 @@ export default class MainPlace extends Component {
    }
 
    render () {
-     console.log("props", this.props);
-     console.log("states", this.state);
      return (
        <div style={styles.container}>
          <img src={this.state.photo} className="mainPlace" alt="mainPlace" />

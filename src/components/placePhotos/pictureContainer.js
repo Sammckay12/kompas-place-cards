@@ -10,11 +10,10 @@ export default class PictureContainer extends Component {
 
   constructor (props) {
      super(props)
-     this.state = {}
+
    }
 
    render () {
-     console.log("place", this.props);
      return (
 
        <div style={styles.container}>

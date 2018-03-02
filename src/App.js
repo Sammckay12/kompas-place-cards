@@ -2,12 +2,15 @@ import React, { Component } from 'react';
 import './App.css';
 import PictureContainer from './components/placePhotos/pictureContainer.js'
 import TopBar from './components/topBar.js'
+import PlaceHeader from './components/placeHeader.js'
 
 class App extends Component {
 
   constructor (props) {
      super(props)
-     this.state = {}
+     this.state = {
+       mainPlace: {},
+     }
    }
 
    componentWillMount () {
@@ -31,8 +34,7 @@ class App extends Component {
       <div className='main-container' style={styles.mainContainer}>
         <TopBar/>
         <PictureContainer mainPlace={this.state.mainPlace}/>
-
-
+        <PlaceHeader mainPlace={this.state.mainPlace}/>
       </div>
     );
   }
