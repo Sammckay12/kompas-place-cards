@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import SimilarPlace from './similarPlace'
 import MainPlace from './mainPlace'
+import './pictureContainer.css';
 
 
 
@@ -13,12 +14,13 @@ export default class PictureContainer extends Component {
    }
 
    render () {
+     console.log("place", this.props);
      return (
 
        <div style={styles.container}>
-         <SimilarPlace />
-         <MainPlace />
-         <SimilarPlace />
+         <SimilarPlace place={this.props.mainPlace} />
+         <MainPlace place={this.props.mainPlace}  />
+         <SimilarPlace place={this.props.mainPlace} />
        </div>
      )
    }

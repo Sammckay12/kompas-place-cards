@@ -1,5 +1,5 @@
 
-import React, { Component } from 'react';
+import React, { Component, Image } from 'react';
 
 
 
@@ -7,13 +7,24 @@ export default class MainPlace extends Component {
 
   constructor (props) {
      super(props)
-     this.state = {}
+     this.state = {
+     }
+   }
+
+   componentWillReceiveProps = (nextProps) => {
+     console.log("this Props", this.props);
+     console.log("nextProps", nextProps);
+     if (nextProps.place) {
+       this.setState({photo: nextProps.place.photos_array[0]})
+     }
    }
 
    render () {
+     console.log("props", this.props);
+     console.log("states", this.state);
      return (
        <div style={styles.container}>
-      main
+         <img src={this.state.photo} className="mainPlace" alt="mainPlace" />
        </div>
      )
    }
@@ -21,11 +32,7 @@ export default class MainPlace extends Component {
 
 let styles = {
   container: {
-    height: 300,
     display: 'flex',
-    flex: 0.4,
-    border: 'solid',
-    borderWidth: 1
-  },
-
+    flex: 0.4
+  }
 }

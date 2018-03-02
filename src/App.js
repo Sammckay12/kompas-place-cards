@@ -10,19 +10,19 @@ class App extends Component {
      this.state = {}
    }
 
-   componentDidMount () {
-     this.getPlace()
+   componentWillMount () {
+     fetch(`http://localhost:3000/places/5a661b5f73f6ee972104e318`)
+     .then((response) => response.json())
+     .then((responseJson) => {
+       console.log("place", responseJson)
+       this.setState({mainPlace: responseJson})
+     })
+     .catch((error) => {
+       console.error(error);
+     });
    }
 
    getPlace() {
-     fetch(`http://localhost:3000/places/5a661b5f73f6ee972104e318`)
-    .then((response) => response.json())
-    .then((responseJson) => {
-      console.log("place", responseJson)
-    })
-    .catch((error) => {
-      console.error(error);
-    });
 
    }
 
@@ -30,7 +30,7 @@ class App extends Component {
     return (
       <div className='main-container' style={styles.mainContainer}>
         <TopBar/>
-        <PictureContainer/>
+        <PictureContainer mainPlace={this.state.mainPlace}/>
 
 
       </div>
@@ -40,7 +40,7 @@ class App extends Component {
 
 let styles = {
   mainContainer: {
-    backgroundColor: '#1faa74'
+    backgroundColor: '#fff'
   }
 }
 

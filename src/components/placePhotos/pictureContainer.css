@@ -1,0 +1,8 @@
+.similarPlace {
+  object-fit: cover;
+  max-width: 30vw;
+}
+.mainPlace {
+  object-fit: cover;
+  max-width: 40vw;
+}
