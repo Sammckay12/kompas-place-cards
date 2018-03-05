@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import OpenInAppButton from './buttons/openInApp.js'
+import PlaceOverview from './placeOverview.js'
 
 export default class PlaceHeader extends Component {
 
@@ -32,6 +33,7 @@ export default class PlaceHeader extends Component {
          <p style={{...styles.textContainer, fontSize: 20}}>{this.props.mainPlace.city}</p>
          <p style={{...styles.textContainer, fontSize: 18, fontFamily: 'HelveticaNeue-Light'}}>{this.state.categories}</p>
          <OpenInAppButton />
+         <PlaceOverview />
        </div>
      )
    }
