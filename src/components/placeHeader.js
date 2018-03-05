@@ -45,8 +45,6 @@ let styles = {
     display: 'flex',
     height: 300,
     backgroundColor: '#fff',
-    border: 'solid',
-    borderWidth: 1,
     justifyContent: 'center',
     flexDirection: 'column',
     alignSelf: 'center',

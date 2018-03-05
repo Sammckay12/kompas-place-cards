@@ -3,6 +3,7 @@ import './App.css';
 import PictureContainer from './components/placePhotos/pictureContainer.js'
 import TopBar from './components/topBar.js'
 import PlaceHeader from './components/placeHeader.js'
+import PlaceDescription from './components/placeDescription.js'
 
 class App extends Component {
 
@@ -41,6 +42,7 @@ class App extends Component {
               <TopBar/>
               <PictureContainer mainPlace={this.state.mainPlace}/>
               <PlaceHeader mainPlace={this.state.mainPlace}/>
+              <PlaceDescription mainPlace={this.state.mainPlace}/>
             </div>
         ) : ( null)
 
