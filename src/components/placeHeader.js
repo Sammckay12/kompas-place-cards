@@ -26,9 +26,9 @@ export default class PlaceHeader extends Component {
      return (
 
        <div style={styles.container}>
-         <p style={styles.textContainer}>{this.props.mainPlace.name}</p>
-         <p style={styles.textContainer}>{this.props.mainPlace.city}</p>
-         <p style={styles.textContainer}>{this.state.categories}</p>
+         <p style={{...styles.textContainer, fontSize: 36}}>{this.props.mainPlace.name}</p>
+         <p style={{...styles.textContainer, fontSize: 20}}>{this.props.mainPlace.city}</p>
+         <p style={{...styles.textContainer, fontSize: 18, fontFamily: 'HelveticaNeue-Light'}}>{this.state.categories}</p>
 
        </div>
      )
@@ -44,13 +44,12 @@ let styles = {
     borderWidth: 1,
     justifyContent: 'center',
     flexDirection: 'column',
+    alignSelf: 'center'
   },
   textContainer: {
     display: 'flex',
     flex: 0.4,
-    backgroundColor: '#ADD8E6',
-    alignSelf: 'center',
+    fontFamily: 'HelveticaNeue-Medium',
     justifyContent: 'center'
   }
-
 }
