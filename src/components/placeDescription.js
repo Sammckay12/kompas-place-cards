@@ -19,6 +19,7 @@ export default class PlaceHeader extends Component {
 
        <div style={styles.container}>
          <p style={styles.textContainer}>{this.props.mainPlace.description}</p>
+         <hr style={styles.separator}></hr>
        </div>
      )
    }
@@ -40,5 +41,11 @@ let styles = {
     width: '40vw',
     fontFamily: 'HelveticaNeue-Light',
     fontSize: 20
+  },
+  separator: {
+    border: 'solid',
+    borderWidth: 1,
+    width: 40,
+    borderColor: '#1FAA74'
   }
 }
