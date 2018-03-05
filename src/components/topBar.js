@@ -14,7 +14,7 @@ export default class TopBar extends Component {
    render () {
      return (
        <div style={styles.container}>
-         <img src={logo} width='150'></img>
+         <img src={logo} width='150' alt="kompasLogo"></img>
        </div>
      )
    }

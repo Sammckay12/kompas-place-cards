@@ -30,7 +30,7 @@ export default class PlaceHeader extends Component {
        <div style={styles.container}>
          <p style={{...styles.textContainer, fontSize: 36}}>{this.props.mainPlace.name}</p>
          <hr style={styles.separator}></hr>
-         <p style={{...styles.textContainer, fontSize: 20}}>{this.props.mainPlace.city}</p>
+         <p style={{...styles.textContainer, fontSize: 20}}>{this.props.mainPlace.city.toUpperCase()}</p>
          <p style={{...styles.textContainer, fontSize: 18, fontFamily: 'HelveticaNeue-Light'}}>{this.state.categories}</p>
          <OpenInAppButton />
          <PlaceOverview

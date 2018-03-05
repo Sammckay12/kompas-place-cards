@@ -1,4 +1,4 @@
-import React, { Component, Image } from 'react';
+import React, { Component } from 'react';
 
 export default class SimilarPlace extends Component {
 
