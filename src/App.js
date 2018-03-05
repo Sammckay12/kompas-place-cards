@@ -10,6 +10,7 @@ class App extends Component {
      super(props)
      this.state = {
        mainPlace: {},
+       loaded: false
      }
    }
 
@@ -18,7 +19,10 @@ class App extends Component {
      .then((response) => response.json())
      .then((responseJson) => {
        console.log("place", responseJson)
-       this.setState({mainPlace: responseJson})
+       this.setState({
+         mainPlace: responseJson,
+         loaded: true
+       })
      })
      .catch((error) => {
        console.error(error);
@@ -31,11 +35,17 @@ class App extends Component {
 
   render() {
     return (
-      <div className='main-container' style={styles.mainContainer}>
-        <TopBar/>
-        <PictureContainer mainPlace={this.state.mainPlace}/>
-        <PlaceHeader mainPlace={this.state.mainPlace}/>
-      </div>
+        <div className='main-container' style={styles.mainContainer}>
+          { this.state.loaded ?  (
+            <div>
+              <TopBar/>
+              <PictureContainer mainPlace={this.state.mainPlace}/>
+              <PlaceHeader mainPlace={this.state.mainPlace}/>
+            </div>
+        ) : ( null)
+
+      }
+        </div>
     );
   }
 }

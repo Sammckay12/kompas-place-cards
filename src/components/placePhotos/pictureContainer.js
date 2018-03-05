@@ -8,10 +8,6 @@ import './pictureContainer.css';
 
 export default class PictureContainer extends Component {
 
-  constructor (props) {
-     super(props)
-
-   }
 
    render () {
      return (
