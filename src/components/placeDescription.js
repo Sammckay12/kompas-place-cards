@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import OpenInAppButton from './buttons/openInApp.js'
-import PlaceOverview from './placeOverview.js'
 
-export default class PlaceHeader extends Component {
+export default class PlaceDescription extends Component {
 
   constructor (props) {
      super(props)
@@ -16,7 +14,6 @@ export default class PlaceHeader extends Component {
 
    render () {
      return (
-
        <div style={styles.container}>
          <p style={styles.textContainer}>{this.props.mainPlace.description}</p>
          <hr style={styles.separator}></hr>
