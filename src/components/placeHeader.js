@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './placeHeader.css';
 
 export default class PlaceHeader extends Component {
 
@@ -13,8 +14,13 @@ export default class PlaceHeader extends Component {
 
        <div style={styles.container}>
          <p style={styles.textContainer}>{this.props.mainPlace.name}</p>
-           <p style={styles.textContainer}>{this.props.mainPlace.category[0]}</p>
+           <p style={styles.textContainer}>{this.props.mainPlace.city}</p>
+           <li className="categoryList">
+           {this.props.mainPlace.category.map(title =>
+               <ul className="categoryList" key={title}>{title}</ul>
+             )}
 
+           </li>
        </div>
      )
    }

@@ -6,3 +6,6 @@
   object-fit: cover;
   max-width: 40vw;
 }
+.categoryList {
+  float: left;
+}
