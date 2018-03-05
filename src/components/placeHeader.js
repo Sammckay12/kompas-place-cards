@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import OpenInAppButton from './buttons/openInApp.js'
 
 export default class PlaceHeader extends Component {
 
@@ -30,7 +31,7 @@ export default class PlaceHeader extends Component {
          <hr style={styles.separator}></hr>
          <p style={{...styles.textContainer, fontSize: 20}}>{this.props.mainPlace.city}</p>
          <p style={{...styles.textContainer, fontSize: 18, fontFamily: 'HelveticaNeue-Light'}}>{this.state.categories}</p>
-
+         <OpenInAppButton />
        </div>
      )
    }
@@ -39,19 +40,19 @@ export default class PlaceHeader extends Component {
 let styles = {
   container: {
     display: 'flex',
-    height: 250 ,
+    height: 300,
     backgroundColor: '#fff',
     border: 'solid',
     borderWidth: 1,
     justifyContent: 'center',
     flexDirection: 'column',
-    alignSelf: 'center'
+    alignSelf: 'center',
+    alignItems: 'center'
   },
   textContainer: {
     display: 'flex',
     flex: 0.4,
-    fontFamily: 'HelveticaNeue-Medium',
-    justifyContent: 'center'
+    fontFamily: 'HelveticaNeue-Medium'
   },
   separator: {
     border: 'solid',
