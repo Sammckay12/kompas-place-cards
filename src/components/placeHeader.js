@@ -27,6 +27,7 @@ export default class PlaceHeader extends Component {
 
        <div style={styles.container}>
          <p style={{...styles.textContainer, fontSize: 36}}>{this.props.mainPlace.name}</p>
+         <hr style={styles.separator}></hr>
          <p style={{...styles.textContainer, fontSize: 20}}>{this.props.mainPlace.city}</p>
          <p style={{...styles.textContainer, fontSize: 18, fontFamily: 'HelveticaNeue-Light'}}>{this.state.categories}</p>
 
@@ -39,7 +40,7 @@ let styles = {
   container: {
     display: 'flex',
     height: 250 ,
-    backgroundColor: '#F1F1F1',
+    backgroundColor: '#fff',
     border: 'solid',
     borderWidth: 1,
     justifyContent: 'center',
@@ -51,5 +52,11 @@ let styles = {
     flex: 0.4,
     fontFamily: 'HelveticaNeue-Medium',
     justifyContent: 'center'
+  },
+  separator: {
+    border: 'solid',
+    borderWidth: 1,
+    width: 40,
+    borderColor: '#1FAA74'
   }
 }
